@@ -1,0 +1,75 @@
+@import "../../../styles/global.scss";
+
+.event_card {
+  display: flex;
+  align-items: center;
+  height: 45vw;
+  background: $shadow;
+
+  @include mq() {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  @include mq($laptop) {
+    justify-content: center;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    padding: 6vw 13vw;
+    gap: 3vw;
+    text-align: center;
+    color: $white;
+    margin: 0 auto;
+
+    @include mq($laptop) {
+      flex-direction: column;
+    }
+  }
+  
+  &__main_text {
+    max-width: 24vw;
+    color: $light-cream;
+
+    @include mq() {
+      max-width: 80vw;
+    }
+  }
+  
+  &__date_event {
+    margin-bottom: 8px;
+    padding: 0 18px 8px;
+    border-bottom: 0.2vw solid $black;
+    color: wheat;
+  }
+  
+  &__type_event {
+    color: wheat;
+  }
+}
+
+.event {
+  &__title {
+    color: $dark-grey;
+    letter-spacing: 13px;
+    text-align: center;
+    margin: 2.5vw 0 1.2vw;
+
+    @include mq($laptop) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.footer {
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    display: flex;
+    gap: 0.2vw;
+  }
+}
